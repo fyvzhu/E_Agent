@@ -1,0 +1,30 @@
+2026-08-05 16:38:12,396 INFO sqlalchemy.engine.Engine SELECT DATABASE()
+2026-08-05 16:38:12,397 INFO sqlalchemy.engine.Engine [raw sql] ()
+2026-08-05 16:38:12,399 INFO sqlalchemy.engine.Engine SELECT @@sql_mode
+2026-08-05 16:38:12,399 INFO sqlalchemy.engine.Engine [raw sql] ()
+2026-08-05 16:38:12,400 INFO sqlalchemy.engine.Engine SELECT @@lower_case_table_names
+2026-08-05 16:38:12,401 INFO sqlalchemy.engine.Engine [raw sql] ()
+2026-08-05 16:38:12,402 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-08-05 16:38:12,404 INFO sqlalchemy.engine.Engine SELECT dialogue_states.sender_id, dialogue_states.state_json 
+FROM dialogue_states 
+WHERE dialogue_states.sender_id = %s
+2026-08-05 16:38:12,405 INFO sqlalchemy.engine.Engine [generated in 0.00031s] ('u1001',)
+2026-08-05 16:38:33,662 INFO sqlalchemy.engine.Engine INSERT INTO dialogue_states (sender_id, state_json) VALUES (%s, %s) AS new ON DUPLICATE KEY UPDATE state_json = new.state_json
+2026-08-05 16:38:33,673 INFO sqlalchemy.engine.Engine [no key 0.01100s] ('u1001', '{"sender_id": "u1001", "active_task": {"flow_id": "order_status_query", "step_id": "ask_order_number", "slots": {}}, "paused_tasks": [], "active_syst ... (580 characters truncated) ... text": "好的，我们先处理订单状态查询。", "object": null}, {"text": "请告诉我你的订单号。", "object": null}]}]}], "current_session_id": "85fc54e8-87a4-478b-b8f7-a680a6aae48f"}')
+2026-08-05 16:38:33,678 INFO sqlalchemy.engine.Engine COMMIT
+INFO:     127.0.0.1:56441 - "POST /api/chat HTTP/1.1" 200 OK
+2026-08-05 16:38:51,694 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-08-05 16:38:51,705 INFO sqlalchemy.engine.Engine SELECT dialogue_states.sender_id, dialogue_states.state_json 
+FROM dialogue_states 
+WHERE dialogue_states.sender_id = %s
+2026-08-05 16:38:51,705 INFO sqlalchemy.engine.Engine [cached since 39.3s ago] ('u1001',)
+2026-08-05 16:41:16,193 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-08-05 16:41:16,203 INFO sqlalchemy.engine.Engine SELECT dialogue_states.sender_id, dialogue_states.state_json 
+FROM dialogue_states 
+WHERE dialogue_states.sender_id = %s
+2026-08-05 16:41:16,203 INFO sqlalchemy.engine.Engine [cached since 183.8s ago] ('u1001',)
+2026-08-05 16:41:16,213 INFO sqlalchemy.engine.Engine INSERT INTO dialogue_states (sender_id, state_json) VALUES (%s, %s) AS new ON DUPLICATE KEY UPDATE state_json = new.state_json
+2026-08-05 16:41:16,221 INFO sqlalchemy.engine.Engine COMMIT
+INFO:     127.0.0.1:61662 - "POST /api/chat HTTP/1.1" 200 OK
+2026-08-05 16:41:52,307 INFO sqlalchemy.engine.Engine INSERT INTO dialogue_states (sender_id, state_json) VALUES (%s, %s) AS new ON DUPLICATE KEY UPDATE state_json = new.state_json
+2026-08-05 16:41:52,312 INFO sqlalchemy.engine.Engine COMMIT

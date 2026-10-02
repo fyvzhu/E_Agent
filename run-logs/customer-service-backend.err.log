@@ -1,0 +1,64 @@
+INFO:     Started server process [13052]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:18082 (Press CTRL+C to quit)
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Users\HP\anaconda3\envs\ECommerce\Lib\logging\__init__.py", line 1163, in emit
+    stream.write(msg + self.terminator)
+UnicodeEncodeError: 'gbk' codec can't encode character '\xa5' in position 322: illegal multibyte sequence
+Call stack:
+  File "C:\Users\HP\anaconda3\envs\ECommerce\Lib\site-packages\sqlalchemy\orm\session.py", line 2373, in execute
+    return self._execute_internal(
+  File "C:\Users\HP\anaconda3\envs\ECommerce\Lib\site-packages\sqlalchemy\orm\session.py", line 2271, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+  File "C:\Users\HP\anaconda3\envs\ECommerce\Lib\site-packages\sqlalchemy\orm\bulk_persistence.py", line 1306, in orm_execute_statement
+    result = conn.execute(
+  File "C:\Users\HP\anaconda3\envs\ECommerce\Lib\site-packages\sqlalchemy\engine\base.py", line 1421, in execute
+    return meth(
+  File "C:\Users\HP\anaconda3\envs\ECommerce\Lib\site-packages\sqlalchemy\sql\elements.py", line 526, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "C:\Users\HP\anaconda3\envs\ECommerce\Lib\site-packages\sqlalchemy\engine\base.py", line 1643, in _execute_clauseelement
+    ret = self._execute_context(
+  File "C:\Users\HP\anaconda3\envs\ECommerce\Lib\site-packages\sqlalchemy\engine\base.py", line 1848, in _execute_context
+    return self._exec_single_context(
+  File "C:\Users\HP\anaconda3\envs\ECommerce\Lib\site-packages\sqlalchemy\engine\base.py", line 1906, in _exec_single_context
+    self._log_info(
+  File "C:\Users\HP\anaconda3\envs\ECommerce\Lib\site-packages\sqlalchemy\engine\base.py", line 188, in _log_info
+    self.engine.logger.info(message, *arg, **kw)
+  File "C:\Users\HP\anaconda3\envs\ECommerce\Lib\site-packages\sqlalchemy\log.py", line 159, in info
+    self.log(logging.INFO, msg, *args, **kwargs)
+  File "C:\Users\HP\anaconda3\envs\ECommerce\Lib\site-packages\sqlalchemy\log.py", line 210, in log
+    self.logger._log(level, msg, args, **kwargs)
+Message: '[%s] %r'
+Arguments: ('no key 0.00044s', ('u1001', '{"sender_id": "u1001", "active_task": null, "paused_tasks": [], "active_system_task": null, "focused_object": {"id": "A20260410001", "type": "order", ... (897 characters truncated) ... "text": "订单A20260410001当前状态是：商家正在备货，预计 24 小时内发出。。订单金额 \xa58999.00。", "object": null}]}]}], "current_session_id": "85fc54e8-87a4-478b-b8f7-a680a6aae48f"}'))
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Users\HP\anaconda3\envs\ECommerce\Lib\logging\__init__.py", line 1163, in emit
+    stream.write(msg + self.terminator)
+UnicodeEncodeError: 'gbk' codec can't encode character '\xa5' in position 322: illegal multibyte sequence
+Call stack:
+  File "C:\Users\HP\anaconda3\envs\ECommerce\Lib\site-packages\sqlalchemy\orm\session.py", line 2373, in execute
+    return self._execute_internal(
+  File "C:\Users\HP\anaconda3\envs\ECommerce\Lib\site-packages\sqlalchemy\orm\session.py", line 2271, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+  File "C:\Users\HP\anaconda3\envs\ECommerce\Lib\site-packages\sqlalchemy\orm\bulk_persistence.py", line 1306, in orm_execute_statement
+    result = conn.execute(
+  File "C:\Users\HP\anaconda3\envs\ECommerce\Lib\site-packages\sqlalchemy\engine\base.py", line 1421, in execute
+    return meth(
+  File "C:\Users\HP\anaconda3\envs\ECommerce\Lib\site-packages\sqlalchemy\sql\elements.py", line 526, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "C:\Users\HP\anaconda3\envs\ECommerce\Lib\site-packages\sqlalchemy\engine\base.py", line 1643, in _execute_clauseelement
+    ret = self._execute_context(
+  File "C:\Users\HP\anaconda3\envs\ECommerce\Lib\site-packages\sqlalchemy\engine\base.py", line 1848, in _execute_context
+    return self._exec_single_context(
+  File "C:\Users\HP\anaconda3\envs\ECommerce\Lib\site-packages\sqlalchemy\engine\base.py", line 1906, in _exec_single_context
+    self._log_info(
+  File "C:\Users\HP\anaconda3\envs\ECommerce\Lib\site-packages\sqlalchemy\engine\base.py", line 188, in _log_info
+    self.engine.logger.info(message, *arg, **kw)
+  File "C:\Users\HP\anaconda3\envs\ECommerce\Lib\site-packages\sqlalchemy\log.py", line 159, in info
+    self.log(logging.INFO, msg, *args, **kwargs)
+  File "C:\Users\HP\anaconda3\envs\ECommerce\Lib\site-packages\sqlalchemy\log.py", line 210, in log
+    self.logger._log(level, msg, args, **kwargs)
+Message: '[%s] %r'
+Arguments: ('no key 0.00112s', ('u1001', '{"sender_id": "u1001", "active_task": null, "paused_tasks": [], "active_system_task": null, "focused_object": null, "sessions": [{"session_id": "85fc ... (657 characters truncated) ... "text": "订单A20260410001当前状态是：商家正在备货，预计 24 小时内发出。。订单金额 \xa58999.00。", "object": null}]}]}], "current_session_id": "85fc54e8-87a4-478b-b8f7-a680a6aae48f"}'))
